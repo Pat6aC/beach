@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Beach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Life is a beach</h1>
+  <div class="navbar">
+     <a href="#ocean">Ocean</a>
+       <a href="#waves">Waves</a>
+         <a href="#wind">Wind</a>
+         <a href="#sun">Sun</a>
+       <a href="#horizon">Horizon</a>
+     <a href="#infinite">Infinite</a>
+   </div>
+ <span>
+  <div><img id="beach" src="beach-4591457_1920.jpg" alt="beach" onclick="playWaves()"></div>
+  <audio id="wave-sound">
+    <source src="ocean-waves.mp3" type="audio/mp3">
+  </audio>
+ </span>
+
+    <div class="container">
+      <div class="article" id="articleText">
+        <h2 id="ocean">Ocean</h2>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+      </div>
+
+      <div class="article" id="articleText">
+        <h2 id="waves">Waves</h2>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+      </div>
+
+      <div class="article" id="articleText">
+        <h2 id="wind">Wind</h2>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+      </div>
+
+      <div class="article" id="articleText">
+        <h2 id="sun">Sun</h2>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+      </div>
+
+      <div class="article" id="articleText">
+        <h2 id="horizon">Horizon</h2>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+      </div>
+
+      <div class="article" id="articleText">
+        <h2 id="infinite">Infinite</h2>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+          <p>Waves seagulls warm salty moving water foam sand infinite sunny dream walking swimming. Endless horizon resting boats kites rocks algae inspiring fish windy ebb tide coast broad open cliffs relaxing mesmerizing tempest terns seashells.</p>
+      </div>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn" title="Back to top">Up</button>
+
+    <script>
+
+      var topButton = document.getElementById("topBtn");
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          topButton.style.display = "block";
+        } else {
+          topButton.style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      let elements = document.getElementsByTagName('h2');
+      let e;
+
+      for (e = 0; e < elements.length; e++) {
+      elements[e].addEventListener('click', playWaves)
+      }
+
+     function playWaves() {
+        var waveSound = document.getElementById('wave-sound');
+        if (waveSound.paused)
+        waveSound.play();
+        else
+        waveSound.pause();
+     }
+
+    </script>
+
+  </body>
+</html>
